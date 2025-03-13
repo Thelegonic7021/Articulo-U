@@ -1,0 +1,285 @@
+/*Apartado para importar iconos y fonts:*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.material-symbols-outlined{
+    color: #131314;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+
+/*Apartado para iconos unicos: */
+
+.flecha{
+    transform: rotate(270deg);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.linea{
+    width: 30px;
+    height: 20px;
+    transform: scale(1,1)rotate(0deg)translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+
+/*Apartado para configurar etiquetas propias de html:*/
+
+body{
+    overflow: hidden;
+}
+
+h1{
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    font-size: 15px;
+}
+
+details summary{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre texto e ícono */
+    list-style: none; /* Oculta la flecha predeterminada */
+}
+
+details summary::marker {
+    display: none;
+}
+
+details[open]  > summary .flecha {
+    transform: rotate(360deg); 
+}
+
+details[open] > summary .linea {
+    
+    transform: scale(1.2, var(--scaleY))rotate(90deg)translateY(-20px);
+    
+}
+
+
+
+/*Apartado para clases:*/
+
+
+.Titulo {
+    position: fixed;
+    top: 0px;
+    left: -5px;
+    border-style: solid;
+    height: 140px;
+    width: 100%;
+    background-color: #666666;
+    border-color: transparent;
+    z-index: -1;
+}
+
+.Descripcion {
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 10px;
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    font-size: 20px;
+
+}   
+
+.Propuestas{
+    width: 34%;
+    top: 30%;
+    padding-left: 65%;
+    
+    font-weight: 100px;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: absolute;
+}
+
+.indicador{
+    position: relative;
+    top: 85%;
+    border: 2px solid;
+    border-radius: 100px ;
+    width: 50px;
+    height: 50px;
+    border-color: #666666;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lineas{
+    display: block;
+    position:absolute;
+    background-color: #666666;
+    width: 20px;  
+    height: 3px;  
+    border-radius: 10px;
+    
+}
+.lineas1{
+    display: block;
+    position: absolute;
+    background-color: #666666;
+    width: 15px;  
+    height: 3px;
+    bottom: 21px;
+    right: 12px;
+    border-radius: 10px;
+    transform: rotate(-40deg);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+.lineas2{
+    display: block;
+    position: absolute;
+    background-color: #666666;
+    width: 15px;  
+    height: 3px;
+    bottom: 21px;
+    right: 12px;
+    border-radius: 10px;
+    transform: rotate(40deg);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.indicador:hover .lineas1{
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.indicador:hover .lineas2{
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.img1{
+    position: relative;
+    width: 80px;
+    height: 90px;
+    opacity: 0;
+    transform: translate(0px,-63px);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.img2{
+    position: relative;
+    width: 120px;
+    height: 90px;
+    opacity: 0;
+    transform: translate(-130px,-63px);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.img3{
+    position: relative;
+    width: 120px;
+    height: 90px;
+    opacity: 0;
+    transform: translate(-250px,-63px);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.img4{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    transform: translate(-370px,-63px);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.indicador:hover ~ .img1 {
+    opacity: 100%;
+    transform: translate(700px, -63px);
+}
+
+.indicador:hover ~ .img2 {
+    opacity: 100%;
+    transform: translate(400px, -63px);
+}
+
+.indicador:hover ~ .img3 {
+    opacity: 100%;
+    transform: translate(100px, -63px);
+}
+.indicador:hover ~ .img4 {
+    opacity: 100%;
+    transform: translate(-150px, -63px);
+}
+
+.inicio {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 1000px solid #212121;
+    border-radius: 50%;
+    max-width: 3500px; 
+    max-height: 3500px;
+    transition: width 7s ease-in-out, height 7s ease-in-out;
+    pointer-events: none;
+}
+
+
+.inicio2 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    border: 10px solid white;
+    border-radius: 50%; 
+    max-width: 3000px; 
+    max-height: 3000px; 
+    transition: width 7s ease-in-out, height 7s ease-in-out;
+
+}
+
+@keyframes expandir {
+    from { width: 0px; height: 0px; }
+    to { width: 2000px; height: 2000px; }
+}
+
+.inicio, .inicio2 {
+    animation: expandir 7s ease-in-out forwards;
+    pointer-events: none;
+}
